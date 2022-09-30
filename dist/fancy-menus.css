@@ -1,0 +1,62 @@
+.fancyMenu-Option-Container, .fancyMenu-Placeholder-Container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 55px;
+    margin: 0;
+    user-select: none;
+}
+
+.fancyMenu-Options-Container {
+    position: absolute;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.fancyMenu-Placeholder-Container {
+    background-color: #b0caff;
+}
+
+.fancyMenu-Option-Container:hover {
+    background-color: #dbdbdb;
+}
+
+.fancyMenu-Option-SubContainer, .fancyMenu-Placeholder-SubContainer {
+    margin-left: 3px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.fancyMenu-Option-Text, .fancyMenu-Placeholder-Text {
+    font-size: 17px;
+}
+
+.fancyMenu-Option-Text, .fancyMenu-Placeholder-Text, .fancyMenu-Option-Description, .fancyMenu-Placeholder-Description {
+    display: flex;
+}
+
+.fancyMenu-Option-Text > span, .fancyMenu-Placeholder-Text > span, .fancyMenu-Option-Description > span, .fancyMenu-Placeholder-Description > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fancyMenu-Option-Image, .fancyMenu-Placeholder-Image {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0 0px;
+    flex-shrink: 0;
+}
+
+.fancyMenu-Placeholder-Icon {
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+}
+
+.fancyMenu-Option-Description, .fancyMenu-Placeholder-Description {
+    font-size: 14px;
+}
