@@ -117,7 +117,7 @@ class FancyMenu {
 
     _resizeOptionsContainer() {
         if (this._optionsContainer) {
-            this._optionsContainer.style.width = `${this._placeholderContainer.clientWidth}px`;
+            this._optionsContainer.style.width = `${this._placeholderContainer.offsetWidth}px`;
         }
     }
 
