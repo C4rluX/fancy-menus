@@ -45,15 +45,15 @@
             // image: "https://twemoji.maxcdn.com/v/14.0.2/72x72/2705.png",
             // icon: "./down-icon.svg"
         })
-        // menu.setItems(
-        //     new Array(10).fill("").map((_, index) => {
-        //         return {
-        //             name: `Option ${index + 1}`,
-        //             description: "This is a clickable option",
-        //             image: "https://twemoji.maxcdn.com/v/14.0.2/72x72/1f449.png"
-        //         };
-        //     })
-        // )
+        menu.setItems(
+            new Array(10).fill("").map((_, index) => {
+                return {
+                    name: `Option ${index + 1}`,
+                    description: "This is a clickable option",
+                    image: "https://twemoji.maxcdn.com/v/14.0.2/72x72/1f449.png"
+                };
+            })
+        )
         menu.refresh();
 
         menu.onSelectOption = (element, index) => {
