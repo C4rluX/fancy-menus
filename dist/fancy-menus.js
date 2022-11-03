@@ -1,7 +1,7 @@
 class FancyMenu {
 
     /**
-        @description Initialize the menu with a element container
+        @description Initialize the menu with a container element
         @param {HTMLElement} container
     */
     constructor(container) {
@@ -48,14 +48,14 @@ class FancyMenu {
     }
     
     /**
-        @description Set placeholder data
+        @description Get placeholder data
     */
     getPlaceholder() {
         return this._placeholderData;
     }
 
     /**
-        @description Returns all of the menu's items
+        @description Returns all the items of the menu
         @returns {Array} Array
     */
     getItems() {
@@ -94,9 +94,8 @@ class FancyMenu {
         @param {boolean} state
     */
     set opened(state) {
-        if (this._optionsContainer) {
-            this._optionsContainer.style.display = state ? "block" : "none";
-        }
+        if (typeof index !== 'boolean') throw new Error("Invalid parameter. 'state' should be a boolean.");
+        if (this._optionsContainer) this._optionsContainer.style.display = state ? "block" : "none";
     }
 
     /**
@@ -112,13 +111,12 @@ class FancyMenu {
         @param {function} callback
     */
     set onSelectOption(callback) {
+        if (typeof callback !== "function") throw new Error("Invalid parameter. 'callback' should be a function.");
         this._selectOptionFunction = callback;
     }
 
     _resizeOptionsContainer() {
-        if (this._optionsContainer) {
-            this._optionsContainer.style.width = `${this._placeholderContainer.offsetWidth}px`;
-        }
+        if (this._optionsContainer) this._optionsContainer.style.width = `${this._placeholderContainer.offsetWidth}px`;
     }
 
     /**
@@ -187,7 +185,7 @@ class FancyMenu {
         this._container.onclick = (event) => {
 
             const element = event.composedPath().find(e => e.className?.includes("fancyMenu-Option-Container"));
-            if (!element) return; // Most likely, the user clicked on the placeholder
+            if (!element) return;
 
             this.selectedIndex = parseInt(element.getAttribute("menuindex"));
             if (this._selectOptionFunction) this._selectOptionFunction(element, this.selectedIndex);
@@ -239,7 +237,7 @@ class FancyMenu {
 
 }
 
-// Hide menus when the document is unfocused or when the users clicks outside a menu
+// Hide menus when the document is unfocused or when the user clicks outside the menu
 
 window.addEventListener("click", (event) => {
     if (!event.composedPath().some(e => e.className?.startsWith("fancyMenu"))) FancyMenu.hideAllMenusOptions();
