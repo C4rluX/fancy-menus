@@ -94,7 +94,6 @@ class FancyMenu {
         @param {boolean} state
     */
     set opened(state) {
-        if (typeof index !== 'boolean') throw new Error("Invalid parameter. 'state' should be a boolean.");
         if (this._optionsContainer) this._optionsContainer.style.display = state ? "block" : "none";
     }
 
