@@ -1,7 +1,7 @@
-# FancyMenus
-So, If you need "menus" in where you can add elements with text, description and an icon, and also add a placeholder with everything already said, this is the right place.
+# ⌨️ FancyMenus
+If you need dropdown menus in where you can add elements with text, description and an icon, and also add a placeholder with everything already said, this is the right place.
 
-## Getting started:
+## 💻 Basic usage
 
 1. First of all you need to create a container element, in where your menu is going to be.
 
